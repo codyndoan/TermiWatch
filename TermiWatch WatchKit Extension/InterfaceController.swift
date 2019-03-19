@@ -64,7 +64,7 @@ func colorAttributedString(string: String, color: UIColor)
 
 func activitySummaryAttributedString(
   _ activitySummary: HKActivitySummary,
-  separator: String = "•"
+  separator: String = " "
 ) -> NSAttributedString {
   let excerciseValue = activitySummary.activeEnergyBurned.doubleValue(
     for: HKUnit.kilocalorie()
@@ -114,16 +114,16 @@ let localizedTemperatureStyle: (MeasurementFormatter) -> Void = {
 
 func progressBarString(percent: UInt, steps: UInt) -> String? {
   let fillCount = Int((Float(steps) * (Float(percent) / 100.0)).rounded())
-  let full = String(repeating: "#", count: fillCount)
-  let empty = String(repeating: ".", count: Int(steps) - fillCount)
+  let full = String(repeating: "█", count: fillCount)
+  let empty = String(repeating: "░", count: Int(steps) - fillCount)
 
-  return "[\(full + empty)]"
+  return "\(full + empty)"
 }
 
 func batteryIndicatorString(percent: UInt) -> String {
   let percentString = "\(percent)%"
 
-  if let batteryIndicator = progressBarString(percent: percent, steps: 5) {
+  if let batteryIndicator = progressBarString(percent: percent, steps: 6) {
     return ("\(batteryIndicator) \(percentString)")
   }
 
@@ -131,11 +131,33 @@ func batteryIndicatorString(percent: UInt) -> String {
 }
 
 class InterfaceController: WKInterfaceController {
+  @IBOutlet var userLabel1: WKInterfaceLabel!
+  @IBOutlet var userLabel2: WKInterfaceLabel!
+  @IBOutlet var userLabel3: WKInterfaceLabel!
   @IBOutlet var batteryLabel: WKInterfaceLabel!
   @IBOutlet var activityLabel: WKInterfaceLabel!
   @IBOutlet var stepsLabel: WKInterfaceLabel!
   @IBOutlet var heartRateLabel: WKInterfaceLabel!
   @IBOutlet var temperatureLabel: WKInterfaceLabel!
+    
+  @IBAction func onMenuItemNameTap() {
+    presentTextInputController(withSuggestions: ["user"], allowedInputMode:   WKTextInputMode.plain) { (arr: [Any]?) in
+      if let answers = arr as? [String] {
+        if answers[0].count < 5 {
+          let answer = answers[0].lowercased()
+          self.userLabel1.setText(answer)
+          self.userLabel2.setText(answer)
+          self.userLabel3.setText(answer)
+        } else {
+          let titleOfAlert = "Sorry"
+          let messageOfAlert = "Maximum of 4 characters"
+          self.presentAlert(withTitle: titleOfAlert, message: messageOfAlert, preferredStyle: .alert, actions: [WKAlertAction(title: "OK", style: .default){
+            self.onMenuItemNameTap()
+          }])
+        }
+      }
+    }
+  }
 
   override func awake(withContext context: Any?) {
     super.awake(withContext: context)
@@ -223,7 +245,7 @@ class InterfaceController: WKInterfaceController {
         unit: HKUnit(from: "count/min"),
         healthStore: healthStore
       ) { [weak self] in
-        self?.heartRateLabel.setText("\(Int($0)) BPM")
+        self?.heartRateLabel.setText("\(Int($0)) bpm")
       }
     }.catch {
       print("Error:", $0)
