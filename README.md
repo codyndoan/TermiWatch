@@ -44,12 +44,12 @@ For devices running watchOS 4 or higher.
       1. Click the **Show project and targets list** button in the top left corner.
   ![Show project and targets list](Screenshots/Show_project_and_targets_list.png)
   1. For each of the 3 **targets**:
-      1. Replece *kuglee* with the name of your developer account. (The name of your Apple ID without the *@xxxx.com*.)
+      1. Replace *kuglee* or *c8doan* with the name of your developer account. (The name of your Apple ID without the *@xxxx.com*.)
       1. Change the **Team** to your team. (Usually this is your name.)
   ![Change team](Screenshots/Change_team.png)
   1. Manually replace bundle identifiers:
       1. Select **XCode** menu -> **Find** -> **Find and Replace in Project…**.
-      1. In the **Text** field type *kuglee*.
+      1. In the **Text** field type *kuglee* or *c8doan*
       1. In the **With** field type with then name of your developer account.
       1. Click the **Replace All** button.
   ![Change bundle identifier](Screenshots/Change_bundle_identifier.png)
