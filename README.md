@@ -1,3 +1,8 @@
+## Current Changes:
+* Force touch to change username
+* Rearranged component labels
+* New character choice for battery indicator
+
 # TermiWatch
 
 Terminal Watch Face for Apple Watch.
