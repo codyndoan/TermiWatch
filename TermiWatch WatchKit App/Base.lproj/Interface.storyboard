@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
+    <device id="watch44" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,34 +20,18 @@
                     <items>
                         <group width="1" alignment="left" layout="vertical" spacing="2" id="6PL-bo-ZK7" userLabel="Terminal Group">
                             <items>
-                                <group width="1" alignment="left" id="9CM-S0-2OZ" userLabel="Prompt Group">
-                                    <items>
-                                        <label alignment="left" text="user" textAlignment="left" id="bcc-Ix-MUn">
-                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
-                                            <variation key="device=watch38mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="11"/>
-                                            </variation>
-                                            <variation key="device=watch42mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
-                                            </variation>
-                                            <variation key="device=watch44mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="15"/>
-                                            </variation>
-                                        </label>
-                                        <label alignment="left" text="@watch:~ $ date" textAlignment="left" id="Ltf-J4-lmv">
-                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
-                                            <variation key="device=watch38mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="11"/>
-                                            </variation>
-                                            <variation key="device=watch42mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
-                                            </variation>
-                                            <variation key="device=watch44mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="15"/>
-                                            </variation>
-                                        </label>
-                                    </items>
-                                </group>
+                                <label alignment="left" text="user@watch:~ $ date" textAlignment="left" id="bcc-Ix-MUn">
+                                    <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
+                                    <variation key="device=watch38mm">
+                                        <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="11"/>
+                                    </variation>
+                                    <variation key="device=watch42mm">
+                                        <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
+                                    </variation>
+                                    <variation key="device=watch44mm">
+                                        <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="15"/>
+                                    </variation>
+                                </label>
                                 <group width="1" alignment="left" spacing="0.0" id="GBb-1y-udv" userLabel="Time Group">
                                     <items>
                                         <dateLabel width="75" alignment="left" textAlignment="left" format="E MMM d" id="vBZ-QA-Zms">
@@ -80,34 +64,18 @@
                                         </dateLabel>
                                     </items>
                                 </group>
-                                <group width="1" alignment="left" id="W5K-cl-CrS" userLabel="Prompt Group">
-                                    <items>
-                                        <label alignment="left" text="user" textAlignment="left" id="uKq-lf-pEe">
-                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
-                                            <variation key="device=watch38mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="11"/>
-                                            </variation>
-                                            <variation key="device=watch42mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
-                                            </variation>
-                                            <variation key="device=watch44mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="15"/>
-                                            </variation>
-                                        </label>
-                                        <label alignment="left" text="@watch:~ $ stat" textAlignment="left" id="kNB-Lh-LlC">
-                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
-                                            <variation key="device=watch38mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="11"/>
-                                            </variation>
-                                            <variation key="device=watch42mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
-                                            </variation>
-                                            <variation key="device=watch44mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="15"/>
-                                            </variation>
-                                        </label>
-                                    </items>
-                                </group>
+                                <label alignment="left" text="user@watch:~ $ stat" textAlignment="left" id="uKq-lf-pEe">
+                                    <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
+                                    <variation key="device=watch38mm">
+                                        <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="11"/>
+                                    </variation>
+                                    <variation key="device=watch42mm">
+                                        <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
+                                    </variation>
+                                    <variation key="device=watch44mm">
+                                        <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="15"/>
+                                    </variation>
+                                </label>
                                 <group width="1" alignment="left" spacing="0.0" id="lYl-fG-xTG" userLabel="Temperature Group">
                                     <items>
                                         <label alignment="left" text="[TEMP] " textAlignment="left" id="azw-dO-cxG">
@@ -252,34 +220,18 @@
                                         </label>
                                     </items>
                                 </group>
-                                <group width="1" alignment="left" id="E8M-m0-fqj" userLabel="Prompt Group">
-                                    <items>
-                                        <label alignment="left" text="user" textAlignment="left" id="JKQ-UW-Q0G">
-                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
-                                            <variation key="device=watch38mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="11"/>
-                                            </variation>
-                                            <variation key="device=watch42mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
-                                            </variation>
-                                            <variation key="device=watch44mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="15"/>
-                                            </variation>
-                                        </label>
-                                        <label alignment="left" text="@watch:~ $ " textAlignment="left" id="aFS-dK-Q2k">
-                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
-                                            <variation key="device=watch38mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="11"/>
-                                            </variation>
-                                            <variation key="device=watch42mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
-                                            </variation>
-                                            <variation key="device=watch44mm">
-                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="15"/>
-                                            </variation>
-                                        </label>
-                                    </items>
-                                </group>
+                                <label alignment="left" text="user@watch:~ $ " textAlignment="left" id="JKQ-UW-Q0G">
+                                    <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
+                                    <variation key="device=watch38mm">
+                                        <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="11"/>
+                                    </variation>
+                                    <variation key="device=watch42mm">
+                                        <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="13"/>
+                                    </variation>
+                                    <variation key="device=watch44mm">
+                                        <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="15"/>
+                                    </variation>
+                                </label>
                             </items>
                             <edgeInsets key="margins" left="0.0" right="0.0" top="11" bottom="0.0"/>
                             <variation key="device=watch44mm">
@@ -310,7 +262,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="85.435897435897445" y="92.846153846153854"/>
+            <point key="canvasLocation" x="85" y="92.589285714285722"/>
         </scene>
     </scenes>
 </document>

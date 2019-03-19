@@ -145,9 +145,9 @@ class InterfaceController: WKInterfaceController {
       if let answers = arr as? [String] {
         if answers[0].count < 5 {
           let answer = answers[0].lowercased()
-          self.userLabel1.setText(answer)
-          self.userLabel2.setText(answer)
-          self.userLabel3.setText(answer)
+          self.userLabel1.setText(answer + "@watch:~ $ date")
+          self.userLabel2.setText(answer + "@watch:~ $ stat")
+          self.userLabel3.setText(answer + "@watch:~ $")
         } else {
           let titleOfAlert = "Sorry"
           let messageOfAlert = "Maximum of 4 characters"
